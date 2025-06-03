@@ -1,0 +1,120 @@
+body,
+html,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", "Roboto", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  transition: background 0.3s, color 0.3s;
+}
+
+.light {
+  --bg: #f8f9fb;
+  --fg: #222;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --card: #fff;
+  --border: #e5e7eb;
+}
+
+.dark {
+  --bg: #18181b;
+  --fg: #f1f5f9;
+  --primary: #60a5fa;
+  --primary-hover: #3b82f6;
+  --card: #23232b;
+  --border: #303036;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+form,
+.card {
+  background: var(--card);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 400px;
+  border: 1px solid var(--border);
+}
+
+input,
+button {
+  font-size: 1rem;
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: var(--primary);
+}
+
+button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 600;
+}
+
+button:hover,
+button:focus {
+  background: var(--primary-hover);
+}
+
+nav {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+nav a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+nav a:hover {
+  background: var(--primary-hover);
+  color: #fff;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  form,
+  .card {
+    padding: 1rem;
+    max-width: 95vw;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+}
